@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react";
 import Header from "./Header";
 import validateform from "../utils/validateform";
-import { useNavigate } from "react-router-dom";
+import { AVATAR, NETFLIX_BG } from "../utils/constants";
+
 import { auth } from "../utils/firebase";
 import {
   createUserWithEmailAndPassword,
@@ -12,7 +13,7 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 
 const Login = () => {
-  const navigate = useNavigate();
+ 
   const dispatch=useDispatch();
   const [isSignInForm, setisSignInForm] = useState(true);
   const [errorMessage, seterrorMessage] = useState(null);
@@ -43,13 +44,13 @@ const Login = () => {
           
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png",
+            photoURL: AVATAR
           })
             .then(() => {
               const {uid,email,displayName,photoURL} = auth.currentUser;
               dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}))
         
-              navigate("/browse");
+              //navigate("/browse");
               // Profile updated!
               // ...
             })
@@ -78,7 +79,7 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          navigate("/browse");
+          //navigate("/browse");
           // ...
         })
         .catch((error) => {
@@ -96,14 +97,14 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/94eb5ad7-10d8-4cca-bf45-ac52e0a052c0/IN-en-20240226-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+        <img className='h-screen object-cover w-screen'
+          src={NETFLIX_BG}
           alt="bg-pic"
         />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="bg-black rounded-md bg-opacity-80 absolute mx-auto w-3/12 my-36 right-0 left-0 p-12 text-white text-center"
+        className="bg-black rounded-md bg-opacity-80 absolute mx-auto w-2/3 md:w-3/12 my-36 right-0 left-0 p-12 text-white text-center"
       >
         <h1 className="text-3xl font-bold mb-6">
           {isSignInForm ? "Sign In" : "Sign Up"}
