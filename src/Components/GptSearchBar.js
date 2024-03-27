@@ -12,6 +12,7 @@ const GptSearchBar = () => {
     const searchText=useRef(null)
     const langKey=useSelector((store)=>store.config.lang)
     const handleGptSearchClick=async()=>{
+      
        console.log(searchText.current.value);
         //make an API call to GPT API and get results
         if(searchText.current.value ){
@@ -28,6 +29,7 @@ const GptSearchBar = () => {
           console.log(gptResults.choices?.[0]?.message?.content.split(","))
           const list=gptResults.choices?.[0]?.message?.content.split(",")
           setgptMovie(list);
+          
           console.log("Movies gpt",gptMovie);
           
          

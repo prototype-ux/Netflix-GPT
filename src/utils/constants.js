@@ -7,6 +7,5 @@ export const SUPPORTED_LANGUAGES = [
     { identifier: "spanish", name: "Spanish" },
   ];
 
-//export const OPENAI_KEY=process.env.REACT_APP_OPENAI_KEY
-export const OPENAI_KEY="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"
-//"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"
+export const OPENAI_KEY=process.env.REACT_APP_OPENAI_KEY
+//export const OPENAI_KEY="DUMMY";
