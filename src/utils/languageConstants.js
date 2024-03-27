@@ -1,7 +1,7 @@
 const lang = {
     en: {
       search: "Search",
-      gptSearchPlaceholder: "What would you like to watch today? Unable to fetch result due to some issues with openai API",
+      gptSearchPlaceholder: "What would you like to watch today?",
     },
     hindi: {
       search: "खोज",
