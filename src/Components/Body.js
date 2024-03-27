@@ -19,7 +19,7 @@ const Body = () => {
 
 
   return (
-    <div>
+    <div className="h-[100vh] ">
       <RouterProvider router={appRouter} />
     </div>
   );
