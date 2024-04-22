@@ -19,7 +19,7 @@ BugFix: if the user is not logged in Redirect /browse to Login Page and vice-ver
 Unsubscibed to the onAuthStateChanged callback
 Add hardcoded values to the constants file
 Regiter TMDB API & create an app & get access token
-Get Data from TMDB now playing movies list API
+
 Custom Hook for Now Playing Movies
 Create movieSlice
 Update Store with movies Data
@@ -31,21 +31,18 @@ Tailwind Classes to make Main Container look awesome
 Build Secondary Component
 Build Movie List
 build Movie Card
-TMDB Image CDN URL
+
 Made the Browsre page amazing with Tailwind CSS
-usePopularMovies Custom hook
+
 GPT Search Page
 GPT Search Bar
-(BONUS) Multi-language Feature in our App
+Multi-language Feature in our App
 Get Open AI Api Key
 Gpt Search API Call
 fetched gptMoviesSuggestions from TMDB
 created gptSlice added data
 Resused Movie List component to make movie suggestion container
-Memoization
-Added .env file
-Adding .env file to gitignore
-Made our Site Responsive
+
 
 
 #Features
@@ -62,5 +59,3 @@ MovieLists * N
 NetflixGPT
 Search Bar
 Movie Suggestions
-                                Project Setup
-Before starting the project please add .env file and add TMDB and OPENAI KEY into it.
