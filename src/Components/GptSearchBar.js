@@ -12,7 +12,7 @@ const GptSearchBar = () => {
     const searchText=useRef(null)
     const langKey=useSelector((store)=>store.config.lang)
     const handleGptSearchClick=async()=>{
-      
+      alert("Sorry, we're currently unable to process your request due to a temporary limitation on our OpenAI API key.")
        console.log(searchText.current.value);
         //make an API call to GPT API and get results
         if(searchText.current.value ){
